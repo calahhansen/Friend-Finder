@@ -5,13 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friend-Finder Home</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+
 </head>
 
 <body>
-    <div background="../images/kevin-delvecchio-7noZJ_4nhU8-unsplash.jpg">
-        <h1>Friend-Finder</h1>
-        <h3>Answer a few basic questions.<br>Then find the friend with the greatest compatibility!</h3>
+    <div class="jumbotron main">
+        <h1>
+            <i class="fa fa-facebook-square" style="font-size:48px;color:black"> Friend-Finder</i></h1>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <h4>Answer a few basic questions.
+            <br>
+            <br>Then find the friend with the greatest compatibility!</h4>
+        <br>
+        <div>
+            <a href="survey.html">
+                <button type="button" class="btn btn-med btn-danger">
+                    <h4>Go to Survey</h4>
+                </button>
+            </a>
+        </div>
     </div>
+    <footer class="footer">
+        <div class="footer-div">
+            <p>
+                <a href="/api/friends">API Friends List</a>
+                 | 
+                <a href="https://github.com/calahhansen/Friend-Finder">Github Repo</a>
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>
