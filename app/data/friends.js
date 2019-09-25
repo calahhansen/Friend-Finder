@@ -1,6 +1,6 @@
 // Friend-Finder (DATA)
 // =============================================================
-const friends = [
+const friendsArray = [
 
 {
     "name": "Adam",
@@ -17,7 +17,7 @@ const friends = [
                 4,
                 1
             ]
-}
+},
 {
     "name": "Calah",
         "photo": "http.#",
@@ -36,4 +36,5 @@ const friends = [
 }
   ];
   
-  
+// EXPORTS the array so we can use it in other files using require.
+module.exports = friendsArray;

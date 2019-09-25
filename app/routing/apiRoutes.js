@@ -1,32 +1,24 @@
-// Dependencies
-// =============================================================
-const express = require("express");
-
-// Sets up the Express App
-// =============================================================
-const app = express();
-const PORT = process.env.port || 3000;
-
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-// API ONLY Routes
+// API ONLY LOAD DATA
 //==================================================================
-// Displays all people on the friends list
-app.get("/api/friends", function(req, res) {
-    return res.json(friends);
+const friendsArray = require("../data/friends");
+
+//ROUTING
+//====================================================================
+module.exports = function(app) {
+
+  //API GET Requests for ALL friends; localhost:3000/api/ returns a JSON of the friends data
+  app.get("/api/friends", function(req,res) {
+    res.json(friendsArray);
   });
-  
-  // Displays a single person, or returns false
-  app.get("/api/friends/:person", function(req, res) {
-    var chosen = req.params.friend;
+  // API GET Requests for a single person, or returns false
+  app.get("/api/friends/:name", function(req, res) {
+    let chosen = req.params.name;
   
     console.log(chosen);
   
-    for (var i = 0; i < friends.length; i++) {
-      if (chosen === friends[i].routeName) {
-        return res.json(friends[i]);
+    for (let i = 0; i < friendsArray.length; i++) {
+      if (chosen === friendsArray[i].routeName) {
+        return res.json(friendsArray[i]);
       }
     }
   
@@ -37,7 +29,7 @@ app.get("/api/friends", function(req, res) {
   app.post("/api/friends", function(req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body parsing middleware
-    var newFriend = req.body;
+    const newFriend = req.body;
     console.log("newFriend", newFriend)
   
     // Using a RegEx Pattern to remove spaces from newCharacter
@@ -46,7 +38,8 @@ app.get("/api/friends", function(req, res) {
   
     console.log(newFriend);
   
-    friends.push(newFriend);
+    friendsArray.push(newFriend);
   
     res.json(newFriend);
   });
+}
