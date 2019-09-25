@@ -2,10 +2,13 @@
 // =============================================================
 const express = require("express");
 // const path = require("path"); moved this to htmlRoutes.js
+// const serve   = require('express-static'); attempted to install to get css working
 
 // Sets up the Express App - basic properties for the express server
 // =============================================================
 const app = express(); //tells node to "create" express app
+// app.use(serve(__dirname + '/public')); //attempting to install static to read css files from local host
+
 const PORT = process.env.port || 3000;  //port set-up that is used in listener below
 
 // Sets up the Express app to handle data parsing
