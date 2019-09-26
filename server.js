@@ -9,7 +9,7 @@ const express = require("express");
 const app = express(); //tells node to "create" express app
 // app.use(serve(__dirname + '/public')); //attempting to install static to read css files from local host
 
-const PORT = process.env.port || 3000;  //port set-up that is used in listener below
+const PORT = process.env.PORT || 3000;  //port set-up that is used in listener below
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
