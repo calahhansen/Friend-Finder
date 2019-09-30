@@ -30,6 +30,10 @@ event.preventDefault();
   seventh = document.getElementsByTagName("Q7")[6].value;
   eighth = document.getElementsByTagName("Q8")[7].value;
   ninth = document.getElementsByTagName("Q9")[8].value;
-  tenth = document.getElementsByTagName("Q10").value;
+  tenth = document.getElementsByTagName("Q10")[9].value;
   console.log(tenth, sixth);
+  
+//   var c = document.getElementsByTagName("input")[0];  looked at W3 for help
+//   var x = c.childNodes[0].nodeValue;  i need the node value to get to the value??
+//   document.getElementById("demo").innerHTML = x;
 }
