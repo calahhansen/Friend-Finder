@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;  //port set-up that is used in listener b
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+app.use(express.static("app/public"));
 //ROUTER points the server to the routes files - route files tell the server how to respond to data requests from URLs
 
 require("./app/routing/apiRoutes")(app);
